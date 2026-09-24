@@ -52,8 +52,27 @@
   [dir="rtl"]{font-family:var(--arabic)}
   @media (max-width:900px){
     .wrap{grid-template-columns:1fr}
-    .side{position:static;max-height:none;border-right:0;border-bottom:1px solid #2a2a30}
-    .phone{max-width:100%;height:min(844px,calc(100dvh - 120px))}
+    /* Pinned, so you can change screen without scrolling back up. */
+    .side{position:sticky;top:0;z-index:30;max-height:none;overflow:visible;
+      border-right:0;border-bottom:1px solid #2a2a30;padding:12px 0 0}
+    .side h1{font-size:14px;letter-spacing:0}
+    /* The blurb and the note are for someone deciding whether to look. On a phone they are
+       between you and the thing itself, so they go. */
+    .side .sub,.side .warn,.side .grp{display:none}
+    /* One scrolling row instead of a column twelve hundred pixels tall. */
+    .wrap,.side,.main{min-width:0}
+    .side nav{display:flex;gap:7px;overflow-x:auto;padding:11px 14px;
+      width:100%;max-width:100vw;min-width:0;
+      scrollbar-width:none;-webkit-overflow-scrolling:touch}
+    .side nav::-webkit-scrollbar{display:none}
+    .side button{width:auto;flex:0 0 auto;white-space:nowrap;padding:7px 13px;font-size:12.5px;
+      border:1px solid #34343d;border-radius:999px;border-left-width:1px}
+    .side button[aria-current="true"]{background:var(--clay);color:#fff;
+      border-color:var(--clay);font-weight:600}
+    .main{padding:14px 12px 32px;gap:10px}
+    .screen-name{font-size:15px}
+    .screen-note{font-size:12px}
+    .phone{max-width:100%;height:min(844px,calc(100dvh - 164px))}
   }
 
   /* ---------- type ---------- */
