@@ -1,11 +1,15 @@
 # Labesny — app preview
 
-**https://band-agents.github.io/labesny-app-preview/**
+**The app: https://band-agents.github.io/labesny-app-preview/**
 
-Every screen of the Labesny mobile app, at phone size, with real products and prices from the
-Labesny catalogue. Pick a screen from the list on the left.
+The Labesny mobile app, compiled for the browser. The same code that runs on a phone — browse,
+open a product, pick a size, fill the bag. It carries its own catalogue of real products, so it
+needs no backend and works from any browser.
 
-It is a preview of the design, not a shop: nothing here takes an order.
+No order can be placed: there is no payment method, on purpose.
 
-Built by [BAND](https://github.com/band-agents) from the app in `band-agents/labesny`. The screens
-are generated from the app's own design tokens, so what is shown here is what the app renders.
+**The screens, one by one: https://band-agents.github.io/labesny-app-preview/screens/**
+
+Every screen drawn at phone size, for looking rather than tapping.
+
+Built by [BAND](https://github.com/band-agents) from `band-agents/labesny`.
